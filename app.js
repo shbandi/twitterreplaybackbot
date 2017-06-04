@@ -26,8 +26,23 @@ var params = {
 
 T.get('search/tweets', params, function(err, data, response) {
   if(!err) {
-    console.log('success', data);
+    console.log('get success', data);
+
+    for(let i = 0; i< data.statuses.length; i++) {
+      //tweet id from response
+      let id = { id: data.statuses[i].id_str}
+      //Favorite the tweet selected
+      T.post('favorites/create', id, function(err, response){
+        if(err) {
+          console.log(err[0].message);
+        } else {
+          let username = response.user.screen_name;
+          let tweetId = response.id_str;
+          console.log('tweet that got favorited:', `https://twitter.com/${username}/status/${tweetId}` )
+        }
+      })
+    }
   } else {
-    console.console.log(err);
+    console.console.log('get failed', err);
   }
 })
