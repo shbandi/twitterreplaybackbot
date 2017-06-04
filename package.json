@@ -1,0 +1,22 @@
+{
+  "name": "twitterreplybackbot",
+  "version": "1.0.0",
+  "description": "sample twitter bot for learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shbandi/twitterreplaybackbot.git"
+  },
+  "author": "Harsha Bandi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shbandi/twitterreplaybackbot/issues"
+  },
+  "homepage": "https://github.com/shbandi/twitterreplaybackbot#readme",
+  "dependencies": {
+    "twitter": "^1.7.0"
+  }
+}
